@@ -2,8 +2,6 @@
 
 Public example trajectories for [TraceVista](https://github.com/Superone77/TraceVista), kept separately from the viewer and conversion skill. Each case is one self-contained `.agent-state.json`, with analyst annotations linked to preserved source records. Browse them on the [TraceVista website](https://tracevista.pages.dev/).
 
-This repository is currently local. Publication as `Superone77/TraceVista-examples` is pending.
-
 ## Cases
 
 | Case | Scope |
@@ -27,10 +25,13 @@ parent/
 └── TraceVista-examples/
 ```
 
-From the viewer repository, use the data revision recorded in `examples.lock.json`:
+From the viewer repository, clone this library and use the data revision recorded in `examples.lock.json`. Skip the clone command if you already have the sibling checkout:
 
 ```bash
-git -C ../TraceVista-examples checkout "$(node -p "require('./examples.lock.json').revision")"
+git clone --no-checkout https://github.com/Superone77/TraceVista-examples.git ../TraceVista-examples
+example_revision="$(node -p "require('./examples.lock.json').revision")"
+git -C ../TraceVista-examples fetch origin "$example_revision"
+git -C ../TraceVista-examples checkout --detach "$example_revision"
 pnpm test:examples
 pnpm dev:site
 ```

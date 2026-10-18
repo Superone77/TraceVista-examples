@@ -13,7 +13,15 @@ Public example trajectories for [TraceVista](https://github.com/Superone77/Trace
 | [Tongyi DeepResearch · Literature Research](https://tracevista.pages.dev/?example=literesearcher-affiliations) | A released LiteResearcher teacher conversation comparing authors' affiliations in two journal articles. |
 | [Codex · Garden Animation](https://tracevista.pages.dev/?example=codex-garden-animation) | A fixed excerpt covering Three.js flowers, breeze animation, video-recording recovery, and a ten-second MP4 check. |
 
-`examples/index.json` lists the cases in website order, with Pi Agent first. Complete exports live in `examples/`; thumbnails live in `example-thumbnails/`. Source attribution and terms are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), with license copies in `LICENSES/`. TraceVista's MIT code license does not replace these source terms.
+`examples/index.json` lists the cases in website order, with Pi Agent first. Complete exports live in `examples/`; thumbnails live in `example-thumbnails/`. Source attribution and terms are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), with license copies in `LICENSES/`.
+
+## License
+
+The [MIT License](LICENSE) applies to TraceVista's original annotations, organization,
+metadata, and documentation in this repository. The source trajectories, code excerpts,
+images, and other third-party material retain their original terms, as listed in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). A JSON export can contain both kinds
+of material; the MIT License does not relicense its embedded sources.
 
 ## Use with the viewer
 
@@ -61,3 +69,12 @@ Changes to `main` require a pull request and one approving review. New commits d
 stale approvals. Administrators are exempt from these protection rules. Force pushes and
 branch deletion are disabled for other users. The settings are recorded in [.github/main-protection.json](.github/main-protection.json),
 and [.github/CODEOWNERS](.github/CODEOWNERS) names the maintainer.
+
+## Contributing and reports
+
+Use an issue to propose an example or report a correction. Include its public source,
+license, and the behavior that makes it useful to explore. Keep private logs and credentials
+out of public issues. Changes are reviewed through pull requests.
+
+See the [code of conduct](CODE_OF_CONDUCT.md) for community standards and
+[SECURITY.md](SECURITY.md) to report exposed private data or a vulnerability.

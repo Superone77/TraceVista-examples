@@ -1,0 +1,33 @@
+name: Example issue
+description: Report an error in an example or propose a correction.
+title: "[Example]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For exposed credentials or private data, use [private reporting](https://github.com/Superone77/TraceVista-examples/security/advisories/new).
+        Do not attach private logs or working API keys to this public issue.
+  - type: input
+    id: example
+    attributes:
+      label: Example
+      description: Case name, filename, or public example URL.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What needs to change?
+      description: Include the relevant node or event IDs and what you expected to see.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Link to public sources or provide a small redacted excerpt.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Viewer and environment
+      description: For display problems, include the viewer URL or revision, browser, and operating system.

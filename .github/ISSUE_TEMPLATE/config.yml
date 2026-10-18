@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report private data or a security issue
+    url: https://github.com/Superone77/TraceVista-examples/security/advisories/new
+    about: Privately report exposed credentials or personal data in an example.
+  - name: Viewer or conversion skill issue
+    url: https://github.com/Superone77/TraceVista/issues/new/choose
+    about: Report problems with the TraceVista viewer or conversion tools.

@@ -58,6 +58,6 @@ The generated `tracevista-release.json` records the viewer revision and dirty st
 ## Main branch protection
 
 Changes to `main` require a pull request and one approving review. New commits dismiss
-stale approvals; the rules also apply to administrators. Force pushes and branch deletion
-are disabled. The settings are recorded in [.github/main-protection.json](.github/main-protection.json),
+stale approvals. Administrators are exempt from these protection rules. Force pushes and
+branch deletion are disabled for other users. The settings are recorded in [.github/main-protection.json](.github/main-protection.json),
 and [.github/CODEOWNERS](.github/CODEOWNERS) names the maintainer.

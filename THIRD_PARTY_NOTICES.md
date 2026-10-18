@@ -26,6 +26,11 @@ actions and evidence references. Original messages, commands, results and attach
 retain their source text. The 30% archived final score, 23.3% pooled development score and
 current v1.2 aggregate are recorded separately.
 
+The added selection manifest replaces local collection paths with
+`source://posttrainbench/` references. Filenames, public source URLs, and the original
+experiment records are preserved. Original and redacted manifest checksums are recorded
+separately.
+
 Project: [PostTrainBench](https://posttrainbench.com/), by Ben Rank, Hardik Bhatnagar,
 Ameya Prabhu, Shira Eisenberg, Karina Nguyen, Matthias Bethge and Maksym Andriushchenko.
 Paper: [PostTrainBench: Can LLM Agents Automate LLM Post-Training?](https://arxiv.org/abs/2603.08640), ICML 2026.

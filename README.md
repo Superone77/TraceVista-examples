@@ -42,7 +42,7 @@ The viewer's default `pnpm dev`, `pnpm test`, and `pnpm build` work without this
 
 ## Preserve and update a case
 
-Preserve original event text, event IDs, call/result pairing, and source attachments. Summaries and inferred relationships must cite evidence. Recorded results, local self-tests, independent evaluation, and benchmark verdicts keep their own scope; converting or validating an export does not rerun the underlying experiment.
+Preserve original event text, event IDs, call/result pairing, and source attachments. Before publishing, replace private local paths with stable source references, including paths inside embedded source text. Record redactions and their checksums. Summaries and inferred relationships must cite evidence. Recorded results, local self-tests, independent evaluation, and benchmark verdicts keep their own scope; converting or validating an export does not rerun the underlying experiment.
 
 The Garden Animation export covers only events `continued:E853` through `continued:E1098` of a longer session. Keep that exact self-contained excerpt and its thumbnail. The full session export and later videos are excluded.
 
@@ -54,3 +54,10 @@ For an approved data update:
 4. Run `pnpm test:examples` and `pnpm build:site`, inspect the showcase, and commit the viewer's updated `examples.lock.json`.
 
 The generated `tracevista-release.json` records the viewer revision and dirty state, plus the example revision and lock-file hash. Keep it with each deployed showcase so a release can be traced to both repositories.
+
+## Main branch protection
+
+Changes to `main` require a pull request and one approving review. New commits dismiss
+stale approvals; the rules also apply to administrators. Force pushes and branch deletion
+are disabled. The settings are recorded in [.github/main-protection.json](.github/main-protection.json),
+and [.github/CODEOWNERS](.github/CODEOWNERS) names the maintainer.

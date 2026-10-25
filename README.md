@@ -2,6 +2,32 @@
 
 Public example trajectories for [TraceVista](https://github.com/Superone77/TraceVista), kept separately from the viewer and conversion skill. Each case is one self-contained `.agent-state.json`, with analyst annotations linked to preserved source records. Browse them on the [TraceVista website](https://tracevista.pages.dev/).
 
+## Submit a trajectory
+
+Contribute one representative trajectory from your paper. We prioritize cases that
+add a different task, agent mechanism, or useful exploration, collaboration, failure,
+recovery, or rollback to the existing examples. Successful and failed runs are welcome.
+
+1. Use [tracevista-skill](https://github.com/Superone77/TraceVista/tree/main/skills/tracevista-skill)
+   to convert a publicly shareable run and check it in [TraceVista](https://tracevista.pages.dev/).
+   The complete, uncompressed `.agent-state.json` must be **5 MB or smaller
+   (5,000,000 bytes)**. A self-contained excerpt is welcome: state its event range
+   and preserve the original records and context within that scope. For larger cases,
+   [open an issue](https://github.com/Superone77/TraceVista-examples/issues/new) first.
+2. Fork this repository and add the export to `examples/`, its catalog entry to
+   `examples/index.json`, and a thumbnail to `example-thumbnails/`. Record the paper,
+   contributor, source, and license or publication permission in `THIRD_PARTY_NOTICES.md`.
+   Keep original records inside the export rather than adding separate raw log files.
+3. Open a pull request and fill in the [trajectory submission template](.github/pull_request_template.md),
+   which GitHub will add to the PR description. Include the paper citation, task,
+   configuration, recorded outcome, and two or three sentences on what makes the case
+   different. A few words of feedback are welcome but optional.
+
+**The TraceVista technical report will cite the source paper of every trajectory
+that passes PR review and is included in this library.** Each accepted case will
+credit its paper and contributor. Positive or negative feedback does not affect
+acceptance or citation. Maintainers handle the viewer lock update and website release.
+
 ## Cases
 
 | Case | Scope |
@@ -72,9 +98,10 @@ and [.github/CODEOWNERS](.github/CODEOWNERS) names the maintainer.
 
 ## Contributing and reports
 
-Use an issue to propose an example or report a correction. Include its public source,
-license, and the behavior that makes it useful to explore. Keep private logs and credentials
-out of public issues. Changes are reviewed through pull requests.
+For a new case, follow [Submit a trajectory](#submit-a-trajectory) and open a PR.
+Use an issue to propose a case before conversion, ask for help, or report a correction.
+Include its public source and the behavior that makes it useful to explore. Keep private
+logs and credentials out of public issues. Changes are reviewed through pull requests.
 
 See the [code of conduct](CODE_OF_CONDUCT.md) for community standards and
 [SECURITY.md](SECURITY.md) to report exposed private data or a vulnerability.
